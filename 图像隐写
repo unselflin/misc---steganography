@@ -1,0 +1,25 @@
+Image: subtle color difference, GIF multi-frame hiding, Exif information hiding, image repair
+1.LSB(Least Significant Bit)最低有效位
+  像素三原色(RGB)
+  通过修改像素中最低位的1bit来达到隐藏的效果
+  工具: stegsolve
+  
+2.将信息隐藏在动态图中,一闪而过,肉眼难以看到
+  工具: stegsolve、Namo GIF、Photoshop
+  
+3.Exif ( ExchangeableImage File )信息隐藏
+  照片的Exif属性中可以保存大量信息
+  
+4.图片修复:
+  常见图片文件结构：
+  JPEG/JPG
+  文件头标识(2 bytes) : FF D8
+  一文件结束标识(2 bytes) : FF D9
+  PNG
+  一文件头标识(8bytes):89 50 4E 47 0D 0A 1A 0A
+  GIF
+  一文件头标识(6 bytes) : 47 49 46 38 39(37) 61
+  BMP
+  文件头标识(2 bytes) : 42 4D
+  图片被损坏,缺少某部分数据如文件头等,需要对图片进行修复
+  工具: 010 winhex
